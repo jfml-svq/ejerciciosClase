@@ -17,11 +17,22 @@ public class CuentaCorriente {
     private int saldo = 0;
     private int limite;
 
-    public CuentaCorriente (String nombre, String dni, int limite){
+    public CuentaCorriente(String pepe_juan, String s, int limite){
         this.nombre = nombre;
         this.dni = dni;
-        this.limite = limite;
+        this.limite = this.limite;
         saldo = 0;
+    }
+
+    public CuentaCorriente(int saldo, int limite) {
+        this.saldo = saldo;
+        this.limite = limite;
+    }
+
+    public CuentaCorriente(String dni, int saldo, int limite) {
+        this.dni = dni;
+        this.saldo = saldo;
+        this.limite = limite;
     }
 
     public void introducirDinero(){
