@@ -15,10 +15,12 @@ public class CuentaCorriente {
     private String nombre;
     private String dni;
     private int saldo = 0;
+    private int limite;
 
-    public CuentaCorriente (String nombre, String dni){
+    public CuentaCorriente (String nombre, String dni, int limite){
         this.nombre = nombre;
         this.dni = dni;
+        this.limite = limite;
         saldo = 0;
     }
 
@@ -30,10 +32,11 @@ public class CuentaCorriente {
 
     public String sacarDinero () {
         int dinero;
+        this.limite = limite;
         Scanner entrada = new Scanner(System.in);
         System.out.println("Cuanto dinero quieres sacar");
         dinero = entrada.nextInt();
-        if ((this.saldo - dinero) <= 0){
+        if ((this.saldo - dinero) <= limite){
             return "El usuario no tiene dinero suficiente";
         }else{
             this.saldo -= dinero;
