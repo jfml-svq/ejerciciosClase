@@ -7,15 +7,15 @@ import java.util.Scanner;
  *•  * Sacar dinero: sólo se podrá sacar dinero hasta el límite marcado para números rojos.
  *•  * Ingresar dinero: se incrementa el saldo
  *• * Mostrar saldo: muestra el saldo disponible
- *
  */
 
 public class CuentaCorriente {
 
-    private String nombre;
-    private String dni;
+    public String nombre;
+    String dni;
     private double saldo = 0;
-    private int limite;
+    private double limite;
+    private String nombreBanco;
 
     public CuentaCorriente(String pepe_juan, String s, int limite){
         this.nombre = nombre;
@@ -59,5 +59,11 @@ public class CuentaCorriente {
           return "El usuario " + nombre + " tiene " + saldo + " en su cuenta corriente";
     }
 
+    public String getNombreBanco() {
+        return "El nombre de nombre del banco de "+ nombre +" "+ nombreBanco;
+    }
 
+    public void setNombreBanco(String nombreBanco) {
+        this.nombreBanco = nombreBanco;
+    }
 }

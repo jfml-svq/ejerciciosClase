@@ -1,16 +1,38 @@
 package ejerciciosClase;
 
+import java.util.Scanner;
+
 public class Application {
     public static void main(String[] args) {
-        CuentaCorriente user1 = new CuentaCorriente("Pepe juan", "11111111N", 50);
-        CuentaCorriente user2 = new CuentaCorriente(500);
 
-        CuentaCorriente user3 = new CuentaCorriente("f10000000",500, 50);
-        System.out.println(user1.getCuentaCorriente());
-        user1.introducirDinero();
-        System.out.println(user1.getCuentaCorriente());
-        user1.sacarDinero();
-        System.out.println(user1.getCuentaCorriente());
-
+        Scanner entrada = new Scanner(System.in);
+        int selector;
+        do {
+            System.out.println("1: Añador nuevo usuario:");
+            System.out.println("2: Meter dinero:");
+            System.out.println("3: Sacar dinero");
+            System.out.println("4: Ver datos de usuario:");
+            System.out.println("0: Salir");
+            selector = entrada.nextInt();
+            switch (selector) {
+                case 0:
+                    break;
+                case 1:
+                    System.out.println("caso 1");
+                    break;
+                case 2:
+                    System.out.println("caso 2");
+                    break;
+                case 3:
+                    System.out.println("caso 3");
+                    break;
+                case 4:
+                    System.out.println("caso 4");
+                    break;
+                default:
+                    System.out.println("No existe esta opcion");
+            }
+        } while (selector != 0);
+        System.out.println("Has salido del programa, chao!");
     }
 }
