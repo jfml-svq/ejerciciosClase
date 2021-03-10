@@ -14,7 +14,7 @@ public class CuentaCorriente {
 
     private String nombre;
     private String dni;
-    private int saldo = 0;
+    private double saldo = 0;
     private int limite;
 
     public CuentaCorriente(String pepe_juan, String s, int limite){
@@ -24,12 +24,12 @@ public class CuentaCorriente {
         saldo = 0;
     }
 
-    public CuentaCorriente(int saldo, int limite) {
+    public CuentaCorriente(int saldo) {
         this.saldo = saldo;
-        this.limite = limite;
+        limite = 0;
     }
 
-    public CuentaCorriente(String dni, int saldo, int limite) {
+    public CuentaCorriente (String dni, int saldo, int limite) {
         this.dni = dni;
         this.saldo = saldo;
         this.limite = limite;
